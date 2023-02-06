@@ -44,11 +44,12 @@ def create_spectogram(verbose=0, mode=None):
             for f in file_names:
                 track_id = int(re.search('fma_small/.*/(.+?).mp3', f).group(1))
                 track_index = list(tracks_id_array).index(str(track_id))
-                if(str(tracks_genre_array[track_index, 0]) != '0'):
+                if str(tracks_genre_array[track_index, 0]) != '0':
                     print(f)
                     y, sr = librosa.load(f)
                     melspectrogram_array = librosa.feature.melspectrogram(y=y, sr=sr, n_mels=128,fmax=8000)
                     mel = librosa.power_to_db(melspectrogram_array)
+                    
                     # Length and Width of Spectogram
                     fig_size = plt.rcParams["figure.figsize"]
                     fig_size[0] = float(mel.shape[1]) / float(100)
@@ -82,6 +83,7 @@ def create_spectogram(verbose=0, mode=None):
             y, sr = librosa.load(f)
             melspectrogram_array = librosa.feature.melspectrogram(y=y, sr=sr, n_mels=128,fmax=8000)
             mel = librosa.power_to_db(melspectrogram_array)
+            
             # Length and Width of Spectogram
             fig_size = plt.rcParams["figure.figsize"]
             fig_size[0] = float(mel.shape[1]) / float(100)
