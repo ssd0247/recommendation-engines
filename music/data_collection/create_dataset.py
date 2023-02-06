@@ -37,6 +37,7 @@ The content's integrity can be verified with sha1sum -c checksums.
 DEFAULT_FMA_KEY = ''
 
 # ----------- UTILS -----------------------------------------------------------------------------
+
 def get_audio_path(audio_dir, track_id):
     """Return the path to the mp3 given the directory where the audio is stored
     and the track ID.
