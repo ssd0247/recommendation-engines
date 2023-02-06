@@ -2,7 +2,7 @@
 
 ---
 
-* Dataset for training is downloaded (in compressed format) from open-source, freely available [Free Music Archive (FMA)][free-music-archive], by first signing on for an account to get the corresponding [API KEY][api-key], to access the download the audio files (legally licensed to be shared freely).
+* Dataset for training is downloaded (in compressed format) from open-source, freely available [Free Music Archive (FMA)][free-music-archive], by first signing on for an account & get the corresponding [API KEY][api-key], to access & download the audio files (legally licensed to be shared freely).
 
 * With some pre-processing steps (like building `artist`, `album` and `track` related folders, trimming the audio sample to only 30 secs etc.) are needed to be performed.
 
