@@ -13,6 +13,7 @@ Code inspired by :
 # Michaël Defferrard, Kirell Benzi, Pierre Vandergheynst, Xavier Bresson, EPFL LTS2.
 
 import os
+import sys
 import subprocess as sp
 import ast
 from datetime import datetime
@@ -392,3 +393,15 @@ def create_zips(dst_dir):
     create_zip('fma_medium.zip', 'fma_large', get_filepaths('medium'))
     create_zip('fma_large.zip', 'fma_large', get_filepaths('large'))
     create_zip('fma_full.zip', 'fma_full', get_filepaths('large'))
+
+if __name__ == '__main__':
+    if sys.argv[1] == 'metadata':
+        download_metadata()
+    elif sys.argv[1] == 'data':
+        download_data(sys.argv[2])
+    elif sys.argv[1] == 'clips':
+        trim_audio(sys.argv[2])
+    elif sys.argv[1] == 'normalize':
+        normalize_permissions_times(sys.argv[2])
+    elif sys.argv[1] == 'zips':
+        create_zips(sys.argv[2])
