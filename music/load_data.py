@@ -4,7 +4,6 @@ import re
 import numpy as np
 import cv2
 from .import_data import create_spectogram
-from .slice_spectogram import vs_method, kaggle_method
 from sklearn.model_selection import train_test_split
 
 
