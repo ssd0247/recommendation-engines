@@ -59,7 +59,7 @@ def vs_method():
                 song_variable = re.search('Test_Spectogram_Images/(.+?).jpg', f).group(1)
                 img = Image.open(f)
                 subsample_size = 128
-                width, height = img.size
+                width, _ = img.size
                 number_of_samples = width // subsample_size
                 for i in range(number_of_samples):
                     start = i * subsample_size

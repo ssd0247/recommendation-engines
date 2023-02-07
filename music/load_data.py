@@ -1,4 +1,4 @@
-"""Converts images and labels into training and testing matrices."""
+"""Converts spectogram images and labels into training and testing tensors."""
 import os
 import re
 import numpy as np
